@@ -82,20 +82,20 @@ class LoginScreen extends StatelessWidget {
                     } else if (email.isNotEmpty) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("Harap input email terlebih dahulu"),
+                          content: Text("Harap input Password terlebih dahulu"),
                         ),
                       );
                     } else if (password.isNotEmpty) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("Harap input password terlebih dahulu"),
+                          content: Text("Harap input Email terlebih dahulu"),
                         ),
                       );
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            "Harap input email dan passwprd terlebih dahulu",
+                            "Harap input Email dan Passwprd terlebih dahulu",
                           ),
                         ),
                       );
