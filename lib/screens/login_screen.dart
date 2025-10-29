@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // logo unidayan
-              Image.asset('assets/unidayan.png', height: 120),
+              Image.asset('./assets/unidayan.png', height: 120),
               const SizedBox(height: 12),
               const Text(
                 'SIAKAD UNIDAYAN',

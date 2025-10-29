@@ -92,9 +92,9 @@ class RegisterScreen extends StatelessWidget {
                     String password = passwordController.text;
                     String confirm = confirmController.text;
 
-                    if (email.isNotEmpty ||
-                        password.isNotEmpty ||
-                        confirm.isNotEmpty) {
+                    if (email.isEmpty ||
+                        password.isEmpty ||
+                        confirm.isEmpty) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text('Semua kolom wajib di isi')),
                       );
@@ -116,8 +116,34 @@ class RegisterScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: child,
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
+              ),
+              const SizedBox(height: 40),
+
+              const Text(
+                '- Or sign up with -',
+                style: TextStyle(color: Colors.black87),
+              ),
+
+              const SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/google.png',height: 36),
+                  const SizedBox(width: 24),
+                  Image.asset('assets/facebook.png',height: 36),
+                  const SizedBox(width: 24),
+                  Image.asset('assets/instagram.png',height: 36),
+
+                ],
               ),
             ],
           ),
